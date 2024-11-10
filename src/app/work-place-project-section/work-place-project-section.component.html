@@ -1,0 +1,26 @@
+<div class="work-place-project-section-inner-div">
+    <div class="work-place-project-section-grid-container-div">
+        <div class="work-place-project-section-grid-items-heading-div work-place-project-section-heading inter-bold font-80">Projects</div>
+        <div class="work-place-project-section-grid-items-div" *ngFor="let work_projects of work_project_list">
+            <div class="work-place-project-section-card-div">
+                <div class="work-place-project-section-card-image-div">
+
+                </div>
+                <div class="work-place-project-section-card-content-div">
+                    <div class="work-place-project-section-card-content-project-name-year-div">
+                        <div class="work-place-project-section-card-content-project-name-div font-20 inter-regular">
+                            {{work_projects?.project_name}}
+                        </div>
+                        <div class="work-place-project-section-card-content-year-div font-20 inter-regular">
+                            {{work_projects?.start}} - {{work_projects?.end}}
+                        </div>
+                    </div>
+                    <div class="work-place-project-section-card-content-role-div font-16 inter-regular">
+                        My role : {{work_projects?.role}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="work-place-project-section-grid-items-emty-div"></div>
+    </div>
+</div>

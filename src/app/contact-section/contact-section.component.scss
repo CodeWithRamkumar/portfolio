@@ -1,0 +1,27 @@
+.contact-section-main-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    .contact-section-heading-div{
+        max-width: 900px;
+        text-align: center;
+    }
+    .contact-section-social-media-div{
+        display: flex;
+        gap: 32px;
+        i{
+            font-size: 30px;
+            color: var(--primary-text-color);
+            cursor: pointer;
+        }
+
+        i:hover{
+            color: var(--secondary-background-color);
+        }
+    }
+
+    .contact-section-download-cv-buton{
+        margin-top: 16px;
+    }
+}

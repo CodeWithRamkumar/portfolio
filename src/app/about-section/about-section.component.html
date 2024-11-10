@@ -1,0 +1,64 @@
+<div class="about-section-inner-div">
+    <div class="about-section-main-heading font-80 inter-bold">About me</div>
+    <div class="about-section-card">
+        <div class="about-section-card-image-div">
+
+        </div>
+        <div class="about-section-card-content-div font-18 inter-regular">
+            <div class="about-section-card-content-1">
+                With three years of experience as a front-end developer, I've been building web and mobile applications
+                from
+                the ground up, meeting the unique needs of clients from diverse industries.
+            </div>
+            <div class="about-section-card-content-2">
+                As for a bit of background, I'm based in India, and though I didn't always know coding was my calling,
+                once
+                I found it, there was no turning back. My journey started with a love for problem-solving, and web
+                development quickly became my playground. After countless hours of self-study (and more music than I’d
+                like
+                to admit), I went from "just trying it out" to fully diving in — and I haven’t looked back since.
+            </div>
+            <div class="about-section-card-content-3">
+                These days, I'm constantly sharpening my skills and keeping up
+                with new tools and technologies, ready to
+                tackle whatever challenge comes next.
+            </div>
+        </div>
+    </div>
+    <div class="education-experince-separate-div">
+        <span class="education-experince-separate-span-1"></span>
+        <span class="education-experince-separate-span-2"></span>
+    </div>
+    <div class="about-education-div">
+        <div class="about-education-content-heading-div inter-medium font-20">Education</div>
+        <div class="about-education-content-main-div">
+            <div class="about-education-content-div" *ngFor="let education of education_list">
+                <div class="about-education-institution-content-div">
+                    <div class="about-education-content-education-name inter-regular font-20">{{education?.education_name}}</div>
+                    <div class="about-education-year-div inter-regular font-20">{{education?.start}}-{{education?.end}}</div>
+                </div>
+                <div class="about-education-content-institution-name inter-regular font-16">{{education?.institution_name}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="education-experince-separate-div">
+        <span class="education-experince-separate-span-1"></span>
+        <span class="education-experince-separate-span-2"></span>
+    </div>
+    <div class="about-experince-div">
+        <div class="about-experince-content-heading-div inter-medium font-20">Experince</div>
+        <div class="about-experince-content-main-div">
+            <div class="about-experince-content-div" *ngFor="let experince of experince_list">
+                <div class="about-experince-institution-content-div">
+                    <div class="about-experince-content-experince-name inter-regular font-20">{{experince?.role}}</div>
+                    <div class="about-experince-year-div inter-regular font-20">{{experince?.start}}-{{experince?.end}}</div>
+                </div>
+                <div class="about-experince-content-institution-name inter-regular font-16">{{experince?.office_name}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="education-experince-separate-div">
+        <span class="education-experince-separate-span-1"></span>
+        <span class="education-experince-separate-span-2"></span>
+    </div>
+</div>

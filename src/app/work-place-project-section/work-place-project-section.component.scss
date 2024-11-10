@@ -1,0 +1,51 @@
+.work-place-project-section-grid-container-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto); 
+    column-gap: 62px;
+    row-gap: 62px;
+
+    .work-place-project-section-grid-items-heading-div {
+      grid-column: span 1;
+    }
+
+    .work-place-project-section-grid-items-div{
+        grid-row: span 2;
+        .work-place-project-section-card-image-div{
+            min-height: 500px;
+            background: white;
+        }
+        .work-place-project-section-card-content-div{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+            .work-place-project-section-card-content-project-name-year-div{
+                display: flex;
+                justify-content: space-between;
+                gap: 8px;
+                .work-place-project-section-card-content-year-div{
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+    
+    .work-place-project-section-grid-items-emty-div{
+        grid-column: span 1;
+    }
+
+}
+
+
+
+@media (max-width: 992px) {
+    .work-place-project-section-grid-container-div {
+        display: flex;
+        flex-direction: column;
+        .work-place-project-section-grid-items-emty-div{
+            display: none;
+        }
+    }
+    
+}
