@@ -1,0 +1,14 @@
+<div class="skill-section-inner-div">
+    <div class="skill-section-main-div">
+        <div class="skill-section-main-heading inter-bold font-80">Skills and services</div>
+        <div class="skill-section-card-main-div">
+            <div class="skill-section-card-div" *ngFor="let skills of skill_and_service_list">
+                <div class="skill-section-card-heading-div inter-bold font-38">{{skills?.heading}}</div>
+                <div class="skill-section-card-label-main-div">
+                    <div class="skill-section-card-label-div inter-bold font-10" *ngFor="let skill of skills?.skilss">{{skill}}</div>
+                </div>
+                <div class="skill-section-card-description-div inter-regular font-18">{{skills?.description}}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+.skill-section-main-div{
+    display: flex;
+    gap: 32px;
+    .skill-section-main-heading {
+        flex-basis: 55%;
+    }
+    .skill-section-card-main-div{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 45%;
+        gap: 32px;
+        .skill-section-card-div{
+            padding: 32px 80px 32px 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            border-top: 1px solid var(--primary-text-color);
+
+            .skill-section-card-label-main-div{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                .skill-section-card-label-div{
+                    border: 1px solid var(--primary-text-color);
+                    padding: 4px 8px;
+                }
+            }
+
+            .skill-section-card-description-div{
+                margin-bottom: 32px;
+            }
+        }
+
+        .skill-section-card-div:last-child{
+            border-bottom: 1px solid var(--primary-text-color);
+
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .skill-section-main-div{
+        flex-direction: column;
+        .skill-section-main-heading {
+            flex-basis: 100%;
+        }
+        .skill-section-card-main-div{
+            flex-basis: 100%;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.about-section-inner-div {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+
+    .about-section-main-heading {
+        text-align: center;
+    }
+
+    .about-section-card {
+        display: flex;
+        gap: 52px;
+
+        .about-section-card-image-div {
+            flex-basis: 50%;
+            background-color: white;
+        }
+
+        .about-section-card-content-div {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 80px 0px;
+            gap: 16px;
+        }
+    }
+
+    .education-experince-separate-div{
+        display: flex;
+        gap: 180px;
+        .education-experince-separate-span-1{
+            width: 95px;
+        }
+        .education-experince-separate-span-2{
+            flex: 1;
+            height: 1px;
+            background-color: var(--primary-text-color);
+        }
+    }
+
+    .about-education-div {
+        display: flex;
+        gap: 180px;
+
+        .about-education-content-main-div {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 32px;
+
+            .about-education-content-div {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .about-education-institution-content-div {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 8px;
+                }
+
+                .about-education-year-div{
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .about-experince-div {
+        display: flex;
+        gap: 180px;
+
+        .about-experince-content-main-div {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 32px;
+
+            .about-experince-content-div {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .about-experince-institution-content-div {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 8px;
+                }
+
+                .about-experince-year-div{
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+@media  (max-width: 992px) {
+    .about-section-inner-div {
+        .about-section-card{
+            flex-direction: column;
+            gap: 0px;
+            .about-section-card-image-div {
+                flex-basis: 100%;
+                min-height: 400px;
+            }
+    
+            .about-section-card-content-div {
+                flex-basis: 100%;
+                padding: 32px 0px;
+            }
+        }
+        .education-experince-separate-div{
+            .education-experince-separate-span-1{
+                display: none;
+            }
+            .education-experince-separate-span-2{
+                width: 100%;
+            }
+        }
+
+        .about-education-div {
+            gap: 16px;
+            flex-direction: column;
+        }
+        .about-experince-div{
+            gap: 16px;
+            flex-direction: column;
+        }
+
+    }
+ 
+}

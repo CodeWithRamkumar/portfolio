@@ -1,0 +1,21 @@
+.footer-section-main-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    border-top: 1px solid var(--primary-text-color);
+    padding: 16px 0px;
+    .footer-section-available-div{
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        span{
+            display: block;  
+            background-color: var(--primary-success-color);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+    }
+  
+}

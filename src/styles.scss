@@ -9,6 +9,17 @@
 
     --tertiary-background-color: #FFFFFF;
     --tertiary-text-color: #000000;
+
+    --primary-button-text-color: #FFFFFF;
+    --primary-button-background-color: transparent;
+
+    --secondary-button-text-color: #000000;
+    --secondary-button-background-color: #00EEFF;
+
+    --tertiary-button-text-color: #000000;
+    --tertiary-button-background-color:  #FFFFFF;
+
+    --primary-success-color: #01C91F;
 }
 
 // Dark theme
@@ -21,6 +32,17 @@
 
     --tertiary-background-color: #FFFFFF;
     --tertiary-text-color: #000000;
+
+    --primary-button-text-color: #FFFFFF;
+    --primary-button-background-color: transparent;
+
+    --secondary-button-text-color: #000000;
+    --secondary-button-background-color: #00EEFF;
+
+    --tertiary-button-text-color: #000000;
+    --tertiary-button-background-color:  #FFFFFF;
+
+    --primary-success-color: #01C91F;
 }
 
 // Font family change
@@ -166,6 +188,10 @@
     font-size: 24px;
 }
 
+.font-26 {
+    font-size: 26px;
+}
+
 .font-38 {
     font-size: 38px;
 }
@@ -174,8 +200,12 @@
     font-size: 56px;
 }
 
-.font-160{
-    font-size: 160px;
+.font-80 {
+    font-size: 80px;
+}
+
+.font-200{
+    font-size: 260px;
 }
 
 
@@ -212,6 +242,10 @@
         font-size: 24px;
     }
 
+    .font-26 {
+        font-size: 26px;
+    }
+
     .font-38 {
         font-size: 38px;
     }
@@ -219,8 +253,13 @@
     .font-56 {
         font-size: 56px;
     }
-    .font-160{
-        font-size: 160px;
+
+    .font-80 {
+        font-size: 80px;
+    }
+
+    .font-200{
+        font-size: 80px;
     }
 }
 
@@ -257,6 +296,10 @@
         font-size: 24px;
     }
 
+    .font-26 {
+        font-size: 26px;
+    }
+
     .font-38 {
         font-size: 38px;
     }
@@ -264,11 +307,53 @@
     .font-56 {
         font-size: 56px;
     }
-    .font-160{
-        font-size: 160px;
+
+    .font-80 {
+        font-size: 80px;
+    }
+    
+    .font-200{
+        font-size: 100px;
     }
 }
 
+
+.p0{
+    padding: 0px;
+}
+
+.m0{
+    margin: 0px;
+}
+
+body,*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.primary-button{
+    height: 48px;
+    padding: 8px 24px;
+    border: 1px solid var(--primary-button-text-color);
+    color: var(--primary-button-text-color);
+    background: var(--primary-background-color);
+    cursor: pointer;
+    font-family: 'Inter-Bold', sans-serif;
+    font-size: 18px;
+}
+
+.primary-button:hover{
+    border: 1px solid var(--tertiary-button-text-color);
+    color: var(--tertiary-button-text-color);
+    background: var(--tertiary-background-color);
+}
+
+.primary-button:active{
+    border: 1px solid var(--secondary-button-text-color);
+    color: var(--secondary-button-text-color);
+    background: var(--secondary-background-color);
+}
 // Global design changes for components
 /* Laptop and large devices */
 
@@ -280,6 +365,6 @@
 
 
 /* Tablets */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 992px) {
     
 }
