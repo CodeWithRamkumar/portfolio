@@ -2,12 +2,16 @@
     display: flex;
     gap: 32px;
     .skill-section-main-heading {
-        flex-basis: 55%;
+        flex: 1;
+        .skill-section-main-heading-text{
+            position: sticky;
+            top: 80px;
+        }
     }
     .skill-section-card-main-div{
         display: flex;
         flex-direction: column;
-        flex-basis: 45%;
+        flex: 1;
         gap: 32px;
         .skill-section-card-div{
             padding: 32px 80px 32px 0px;
@@ -42,10 +46,22 @@
     .skill-section-main-div{
         flex-direction: column;
         .skill-section-main-heading {
-            flex-basis: 100%;
+            width: 100%;
+            .skill-section-main-heading-text{
+                position: relative;
+                top: inherit;
+            }
         }
         .skill-section-card-main-div{
-            flex-basis: 100%;
+            width: 100%;
+            .skill-section-card-div{
+                padding: 32px 0px;
+                .skill-section-card-description-div{
+                    margin-bottom: 0px;
+                }
+            }
         }
+
+       
     }
 }

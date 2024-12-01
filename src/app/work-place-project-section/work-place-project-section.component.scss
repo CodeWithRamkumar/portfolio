@@ -12,8 +12,12 @@
     .work-place-project-section-grid-items-div{
         grid-row: span 2;
         .work-place-project-section-card-image-div{
-            min-height: 500px;
-            background: white;
+            img{
+                max-width: 100%;
+                height: 600px;
+                object-fit: cover;
+                width: 100%;
+            }
         }
         .work-place-project-section-card-content-div{
             display: flex;
@@ -43,8 +47,31 @@
     .work-place-project-section-grid-container-div {
         display: flex;
         flex-direction: column;
+        .work-place-project-section-grid-items-div{
+            .work-place-project-section-card-image-div{
+                img{
+                    height: 600px;
+                }
+            }
+
+        }
         .work-place-project-section-grid-items-emty-div{
             display: none;
+        }
+    }
+    
+}
+
+
+@media (max-width: 480px) {
+    .work-place-project-section-grid-container-div {
+        .work-place-project-section-grid-items-div{
+            .work-place-project-section-card-image-div{
+                img{
+                    height: 400px;
+                }
+            }
+
         }
     }
     
