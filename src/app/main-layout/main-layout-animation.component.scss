@@ -1,0 +1,130 @@
+
+.container{
+    .container-main-blur-span{
+        min-width: 300px;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--blur-background-color);
+        display: block;
+        z-index: 2;
+        position: fixed;
+        backdrop-filter: blur(5px);
+    }
+      
+}
+
+.home-section-div,
+.project-section-div,
+.skill-section-div,
+.about-section-div,
+.work-place-project-section-div,
+.contact-section-div,
+.my-hobbies-section-div,
+.footer-section-div{
+  position: relative;
+  z-index: 3;
+}
+
+.background-color-round-div{
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    background: var(--secondary-background-color);
+    display: block;
+    border-radius: 50%;
+}
+
+.home-blur-five-star0{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    left: 40%;
+    path{
+        fill: var(--secondary-background-color);
+    }
+}
+
+.home-blur-five-star1{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 50px;
+    right: 20px;
+    path{
+        fill: var(--secondary-background-color);
+    }
+}
+
+.home-section-blur-main-div{
+    position: relative;
+    overflow: hidden;
+    .home-section-left-side-blur{
+        left: -100px;
+        bottom: 100px;
+    }
+    .home-section-right-side-blur{
+        right: -100px;
+        top: 80px;
+    }
+}
+
+.project-section-blur-main-div{
+    position: relative;
+    overflow: hidden;
+    .project-section-left-side-blur{
+        top: 200px;
+        left: -100px;
+    }
+    .project-section-right-side-blur{
+        top: 500px;
+        right: 0px;
+    }
+}
+
+.skill-section-blur-main-div{
+    position: relative;
+    .skill-section-left-side-blur{
+        top: 300px;
+        left: 0px;
+    }
+}
+
+.about-section-blur-main-div{
+    position: relative;
+    overflow: hidden;
+    .about-section-right-side-blur{
+        top: 100px;
+        right: -100px;
+    }
+}
+
+.work-section-blur-main-div{
+    position: relative;
+    overflow: hidden;
+    .work-section-left-side-blur{
+        top: 100px;
+        left: -100px;
+    }
+    .work-section-right-side-blur{
+        top: 500px;
+        right: 0px;
+    }
+}
+
+.contact-section-blur-main-div{
+    position: relative;
+    .contact-section-right-side-blur{
+        top: 0px;
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .background-color-round-div,
+    .home-blur-five-star0,
+    .home-blur-five-star1{
+        display: none;
+    }
+}

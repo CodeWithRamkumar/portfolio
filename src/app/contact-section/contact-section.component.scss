@@ -25,3 +25,26 @@
         margin-top: 16px;
     }
 }
+
+.contact-five-star{
+    width: 30px;
+    height: 30px;
+    margin-left: 100px;
+    margin-bottom: 16px;
+}
+
+.start-rotate-360{
+    svg{
+        path{
+            fill: var(--secondary-background-color);     
+        }
+        cursor: pointer;
+        transition: transform 1s ease-in-out;
+    }
+}
+
+.start-rotate-360:hover{
+    svg{
+        transform: rotate(360deg);
+    }
+}
