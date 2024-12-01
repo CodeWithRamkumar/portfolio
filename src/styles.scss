@@ -1,28 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-// Light theme
-:root {
-    --primary-background-color: #000000;
-    --primary-text-color: #FFFFFF;
-
-    --secondary-background-color: #00EEFF;
-    --secondary-text-color: #000000;
-
-    --tertiary-background-color: #FFFFFF;
-    --tertiary-text-color: #000000;
-
-    --primary-button-text-color: #FFFFFF;
-    --primary-button-background-color: transparent;
-
-    --secondary-button-text-color: #000000;
-    --secondary-button-background-color: #00EEFF;
-
-    --tertiary-button-text-color: #000000;
-    --tertiary-button-background-color:  #FFFFFF;
-
-    --primary-success-color: #01C91F;
-}
-
-// Dark theme
+// dark theme
 .dark-theme {
     --primary-background-color: #000000;
     --primary-text-color: #FFFFFF;
@@ -43,6 +20,32 @@
     --tertiary-button-background-color:  #FFFFFF;
 
     --primary-success-color: #01C91F;
+    --ramkumar-name-gradient-color: linear-gradient(180deg, #00EEFF 27.4%, #EAFEFF 47.5%, #00EEFF 62.9%);
+}
+
+// light theme
+.light-theme {
+    --primary-background-color: #FFFFFF;
+    --primary-text-color: #000000;
+
+    --secondary-background-color: #0979DB;
+    --secondary-text-color: #000000;
+
+    --tertiary-background-color: #000000;
+    --tertiary-text-color: #FFFFFF;
+
+    --primary-button-text-color: #000000;
+    --primary-button-background-color: transparent;
+
+    --secondary-button-text-color: #000000;
+    --secondary-button-background-color: #0979DB;
+
+    --tertiary-button-text-color: #FFFFFF;
+    --tertiary-button-background-color:  #000000;
+
+    --primary-success-color: #01C91F;
+    --ramkumar-name-gradient-color: #0979DB;
+
 }
 
 // Font family change
@@ -247,23 +250,23 @@
     }
 
     .font-38 {
-        font-size: 38px;
+        font-size: 28px;
     }
 
     .font-56 {
-        font-size: 56px;
+        font-size: 30px;
     }
 
     .font-80 {
-        font-size: 80px;
+        font-size: 34px;
     }
-
+    
     .font-200{
         font-size: 80px;
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 992px) {
     .font-10 {
         font-size: 10px;
     }
@@ -309,14 +312,68 @@
     }
 
     .font-80 {
-        font-size: 80px;
+        font-size: 64px;
     }
     
     .font-200{
-        font-size: 100px;
+        font-size: 120px;
     }
 }
 
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .font-10 {
+        font-size: 10px;
+    }
+
+    .font-12 {
+        font-size: 12px;
+    }
+
+    .font-14 {
+        font-size: 14px;
+    }
+
+    .font-16 {
+        font-size: 16px;
+    }
+
+    .font-18 {
+        font-size: 18px;
+    }
+
+    .font-20 {
+        font-size: 20px;
+    }
+
+    .font-22 {
+        font-size: 22px;
+    }
+
+    .font-24 {
+        font-size: 24px;
+    }
+
+    .font-26 {
+        font-size: 26px;
+    }
+
+    .font-38 {
+        font-size: 34px;
+    }
+
+    .font-56 {
+        font-size: 46px;
+    }
+
+    .font-80 {
+        font-size: 54px;
+    }
+    
+    .font-200{
+        font-size: 160px;
+    }
+}
 
 .p0{
     padding: 0px;
@@ -353,6 +410,11 @@ body,*{
     border: 1px solid var(--secondary-button-text-color);
     color: var(--secondary-button-text-color);
     background: var(--secondary-background-color);
+}
+
+app-main-layout{
+    display: block;
+    min-width: 300px;
 }
 // Global design changes for components
 /* Laptop and large devices */

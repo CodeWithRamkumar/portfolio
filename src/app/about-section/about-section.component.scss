@@ -12,12 +12,15 @@
         gap: 52px;
 
         .about-section-card-image-div {
-            flex-basis: 50%;
-            background-color: white;
+            max-width: 600px;
+            width: 100%;
+            img{
+                width: 400px;
+                height: 475px;
+            }
         }
 
         .about-section-card-content-div {
-            flex-basis: 50%;
             display: flex;
             flex-direction: column;
             padding: 80px 0px;
@@ -95,17 +98,25 @@
 
 @media  (max-width: 992px) {
     .about-section-inner-div {
+        gap: 32px;
         .about-section-card{
             flex-direction: column;
             gap: 0px;
             .about-section-card-image-div {
-                flex-basis: 100%;
-                min-height: 400px;
+                width: 100%;
+                max-width: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 300px;
+                    height: auto;
+                }
             }
     
             .about-section-card-content-div {
-                flex-basis: 100%;
-                padding: 32px 0px;
+                width: 100%;
+                padding: 16px 0px;
             }
         }
         .education-experince-separate-div{

@@ -18,7 +18,8 @@
                 max-width: 350px;
                 margin: 0px 32px;
 
-                span {
+                .home-section-opening-div::before{
+                    content: '';
                     width: 8px;
                     height: 8px;
                     display: inline-block;
@@ -35,10 +36,12 @@
                         height: 37px;
                         position: absolute;
                         left: -25px;
-                        bottom: -70px;
+                        bottom: -60px;
                     }
                 }
             }
+
+            
         }
 
         .home-section-second-row {
@@ -50,11 +53,13 @@
                 align-items: center;
 
                 .passionate-star {
-                    width: 72px;
-                    height: 72px;
-                    position: absolute;
-                    left: -52px;
-                    bottom: -72px;
+                    svg{
+                        width: 72px;
+                        height: 72px;
+                        position: absolute;
+                        left: -52px;
+                        bottom: -72px;
+                    }
                 }
 
                 .home-section-role-label-div {
@@ -64,7 +69,7 @@
                     border: 1px solid var(--secondary-background-color);
 
                     span {
-                        color: var(--secondary-text-color);
+                        color: var(--primary-background-color);
                         -webkit-text-stroke: 1.5px var(--secondary-background-color);
                     }
                 }
@@ -72,10 +77,91 @@
 
             .home-section-kumar-div {
                 color: var(--secondary-background-color);
-                background: linear-gradient(180deg, #00EEFF 27.4%, #EAFEFF 47.5%, #00EEFF 62.9%);
+                background: var(--ramkumar-name-gradient-color);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
         }
     }
+    .home-section-mobile-main-div{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+        margin: 20px 30px;
+        .home-section-mobile-kumar-div{
+            color: var(--secondary-background-color);
+            background: var(--ramkumar-name-gradient-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .home-section-mobile-opening-div::before{
+            content: '';
+            width: 8px;
+            height: 8px;
+            min-width: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: var(--primary-success-color);
+            margin-right: 10px;
+        }
+
+        .home-section-mobile-role-label-div{
+            margin: 20px 0px;
+            position: relative;
+            padding: 10px 20px;
+            border-radius: 1px;
+            border: 1px solid var(--secondary-background-color);
+
+            span {
+                color: var(--primary-background-color);
+                -webkit-text-stroke: 1.5px var(--secondary-background-color);
+            }
+
+            .passionate-mobile-star{
+                svg{
+                    position: absolute;
+                    left: -40px;
+                    width: 40px;
+                    height: 40px;
+                    bottom: -16px;
+                    min-width: 40px;
+                }
+            }
+        }
+
+        .home-section-mobile-experince-div{
+            max-width: 600px;
+        }
+    }
+}
+
+.start-rotate-360{
+    svg{
+        path{
+            fill: var(--secondary-background-color);     
+        }
+        cursor: pointer;
+        transition: transform 1s ease-in-out;
+    }
+}
+
+.start-rotate-360:hover{
+    svg{
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 992px) {
+    .home-section-inner-div {
+        .home-section-main-div{
+            display: none;
+        }
+        .home-section-mobile-main-div{
+            display: flex;
+        }
+    }
+
 }
