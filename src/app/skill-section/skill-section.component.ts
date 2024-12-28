@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './skill-section.component.html',
-  styleUrl: './skill-section.component.scss'
+  styleUrls: ['./skill-section.component.scss']
 })
 export class SkillSectionComponent implements OnInit{
   skill_and_service_list!: { heading: string; skilss: string[]; description: string; }[];

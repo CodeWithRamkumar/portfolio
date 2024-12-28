@@ -9,16 +9,17 @@
     .footer-section-available-div{
         display: inline-flex;
         align-items: flex-start;
-        gap: 8px;
-        span{
-            display: block;  
-            background-color: var(--primary-success-color);
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            min-width: 8px;
-            margin-top: 4px;
-        }
+        gap:4px;
+    }
+    .footer-section-available-div::before{
+        content: '';
+        display: block;  
+        background-color: var(--primary-success-color);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        min-width: 8px;
+        margin-top: 4px;
     }
 }
 

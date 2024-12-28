@@ -4,8 +4,9 @@
     .inner-container{
         display: flex;
         flex-direction: column;
-        // max-width: 1820px;
+        // max-width: 1600px;
         // margin: 0 auto;
+        // overflow: hidden; 
     }
 }
 
@@ -24,10 +25,21 @@
     height: 100vh;
 }
 
+.my-hobbies-section-div,
 .project-section-div,
 .skill-section-div,
 .about-section-div,
 .work-place-project-section-div,
+.contact-section-div{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.project-section-div,
+.skill-section-div,
+.about-section-div,
+.work-place-project-section-div,
+.my-hobbies-section-div,
 .contact-section-div{
     padding: 60px 32px 0px 32px;
 }

@@ -1,24 +1,24 @@
 <div class="header-section-inner-div">
     <div class="header-section-main-div">
         <div class="header-section-left-side-div">
-            <div class="header-section-left-side-logo-div font-14 inter-bold">
+            <div class="header-section-left-side-logo-div font-14 inter-bold header-animation-class animation-section-hide-top">
                 RK
             </div>
             <div class="header-section-left-side-text-div">
-                <div class="header-section-left-side-text font-14 inter-bold cp" (click)="scrollToFragment('home-section-app-id')">Home</div>
-                <div class="header-section-left-side-text font-14 inter-bold cp" (click)="scrollToFragment('project-section-app-id')">Project</div>
-                <div class="header-section-left-side-text font-14 inter-bold cp" (click)="scrollToFragment('about-section-app-id')">About</div>
-                <div class="header-section-left-side-text font-14 inter-bold cp" (click)="scrollToFragment('work-section-app-id')">Work</div>
-                <div class="header-section-left-side-text font-14 inter-bold cp" (click)="scrollToFragment('contact-section-app-id')">Contact</div>
+                <div class="header-section-left-side-text font-14 inter-bold cp header-animation-class animation-section-hide-top" (click)="scrollToFragment('home-section-app-id')">Home</div>
+                <div class="header-section-left-side-text font-14 inter-bold cp header-animation-class animation-section-hide-top" (click)="scrollToFragment('project-section-app-id')">Project</div>
+                <div class="header-section-left-side-text font-14 inter-bold cp header-animation-class animation-section-hide-top" (click)="scrollToFragment('about-section-app-id')">About</div>
+                <div class="header-section-left-side-text font-14 inter-bold cp header-animation-class animation-section-hide-top" (click)="scrollToFragment('work-section-app-id')">Work</div>
+                <div class="header-section-left-side-text font-14 inter-bold cp header-animation-class animation-section-hide-top" (click)="scrollToFragment('footer-section-app-id')">Contact</div>
             </div>
         </div>
         <div class="header-section-right-side-div">
-            <div class="header-section-right-side-download-main-div">
+            <div class="header-section-right-side-download-main-div header-animation-class animation-section-hide-top">
                 <div class="header-section-right-side-download-div cp" (click)="downloadFile()">
                     <i class="fa-solid fa-download"></i> 
                 </div>
             </div>
-            <div class="header-section-right-side-share-main-div cp" (click)="copyLinkTrigger()" [ngClass]="{'header-section-right-side-share-div-background-color-change':copied_link_trigger}">
+            <div class="header-section-right-side-share-main-div cp header-animation-class animation-section-hide-top" (click)="copyLinkTrigger()" [ngClass]="{'header-section-right-side-share-div-background-color-change':copied_link_trigger}">
                 <div class="header-section-right-side-share-div" *ngIf="copied_link_trigger">
                     <span class="font-14 inter-bold">Url copied</span>
                     <i class="fa-solid fa-circle-check"></i>
@@ -29,52 +29,52 @@
                     <i class="fa-solid fa-copy "></i>
                 </div>
             </div>
-            <div class="header-section-theme-change-main-div cp" (click)="themeChangeTrigger()">
+            <div class="header-section-theme-change-main-div cp header-animation-class animation-section-hide-top" (click)="themeChangeTrigger()">
                 <i class="fa-solid fa-moon"  [ngClass]="{'dark-mode-icon': theme_type=='Dark'}"></i>
                 <i class="fa-solid fa-sun" [ngClass]="{'dark-mode-icon': theme_type=='Light'}"></i>
             </div>
         </div>
     </div>
     <div class="header-section-main-mobile-div">
-        <div class="header-section-mobile-left-side inter-bold font-12">
+        <div class="header-section-mobile-left-side inter-bold font-12 header-animation-class animation-section-hide-top">
             RK
         </div>
         <div class="header-section-mobile-center-side">
-            <div class="header-section-theme-change-main-div cp" (click)="themeChangeTrigger()">
+            <div class="header-section-theme-change-main-div cp header-animation-class animation-section-hide-top" (click)="themeChangeTrigger()">
                 <i class="fa-solid fa-moon"  [ngClass]="{'dark-mode-icon': theme_type=='Dark'}"></i>
                 <i class="fa-solid fa-sun" [ngClass]="{'dark-mode-icon': theme_type=='Light'}"></i>
             </div>
         </div>
-        <div class="header-section-mobile-right-side" (click)="openMenu()">
+        <div class="header-section-mobile-right-side header-animation-class animation-section-hide-top" (click)="openMenu()">
             <i class="fa-solid fa-bars cp font-20"></i>
         </div>
     </div>
 </div>
 <div class="header-section-mobile-menu-main-div" [ngClass]="menu_type=='' ? '':menu_type">
     <div class="header-section-mobile-menu-div">
-        <div class="header-section-mobile-menu-close-div cp" (click)="openMenu()">
+        <div class="header-section-mobile-menu-close-div cp header-animation-class animation-section-hide-top" (click)="openMenu()">
             <i class="fa-solid fa-xmark font-26"></i>
         </div>
-        <div class="header-section-mobile-menu-text-div cp">
+        <div class="header-section-mobile-menu-text-div cp header-animation-class animation-section-hide-top">
             <span class="font-26 inter-bold" (click)="scrollToFragment('home-section-app-id');openMenu();">Home</span>
         </div>
-        <div class="header-section-mobile-menu-text-div cp">
+        <div class="header-section-mobile-menu-text-div cp header-animation-class animation-section-hide-top">
             <span class="font-26 inter-bold" (click)="scrollToFragment('project-section-app-id');openMenu();">Project</span>
         </div>
-        <div class="header-section-mobile-menu-text-div cp">
+        <div class="header-section-mobile-menu-text-div cp header-animation-class animation-section-hide-top">
             <span class="font-26 inter-bold"  (click)="scrollToFragment('about-section-app-id');openMenu();">About</span>
         </div>
-        <div class="header-section-mobile-menu-text-div cp">
+        <div class="header-section-mobile-menu-text-div cp header-animation-class animation-section-hide-top">
             <span class="font-26 inter-bold" (click)="scrollToFragment('work-section-app-id');openMenu();">Work</span>
         </div>
-        <div class="header-section-mobile-menu-text-div cp">
-            <span class="font-26 inter-bold" (click)="scrollToFragment('contact-section-app-id');openMenu();">Contact</span>
+        <div class="header-section-mobile-menu-text-div cp header-animation-class animation-section-hide-top">
+            <span class="font-26 inter-bold" (click)="scrollToFragment('footer-section-app-id');openMenu();">Contact</span>
         </div>
-        <div class="header-section-mobile-menu-text-div cp">
+        <div class="header-section-mobile-menu-text-div cp header-animation-class animation-section-hide-top">
             <span class="font-26 inter-bold" (click)="downloadFile();openMenu()">Download CV</span>
             <i class="fa-solid fa-download font-26"></i> 
         </div>
-        <div class="header-section-mobile-menu-text-div cp">
+        <div class="header-section-mobile-menu-text-div cp header-animation-class animation-section-hide-top">
             <span class="font-26 inter-bold" (click)="copyLinkTrigger();openMenu();">Share</span>
             <i class="fa-solid fa-copy font-26"></i>
         </div>

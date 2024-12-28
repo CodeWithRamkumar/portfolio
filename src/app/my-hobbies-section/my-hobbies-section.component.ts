@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './my-hobbies-section.component.html',
-  styleUrl: './my-hobbies-section.component.scss'
+  styleUrls: ['./my-hobbies-section.component.scss']
 })
 export class MyHobbiesSectionComponent {
 

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './about-section.component.html',
-  styleUrl: './about-section.component.scss'
+  styleUrls: ['./about-section.component.scss']
 })
 export class AboutSectionComponent implements OnInit {
   education_list!: { education_name: string; institution_name: string; start: string; end: string; }[];

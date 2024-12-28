@@ -1,7 +1,8 @@
 .work-place-project-section-grid-container-div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto); 
+    // grid-template-columns: minmax(0, 600px) minmax(0, 600px);
+    // grid-template-rows: minmax(100px, 200px) minmax(100px, auto); 
     column-gap: 62px;
     row-gap: 62px;
 
@@ -11,33 +12,45 @@
 
     .work-place-project-section-grid-items-div{
         grid-row: span 2;
-        .work-place-project-section-card-image-div{
-            img{
-                max-width: 100%;
-                height: 600px;
-                object-fit: cover;
-                width: 100%;
+        display: flex;
+        .work-place-project-section-card-div{
+            width: 100%;
+            max-width: 570px;
+            .work-place-project-section-card-image-div{
+                img{
+                    max-width: 100%;
+                    height: 500px;
+                    object-fit: cover;
+                    width: 100%;
+                }
             }
-        }
-        .work-place-project-section-card-content-div{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 10px;
-            .work-place-project-section-card-content-project-name-year-div{
+            .work-place-project-section-card-content-div{
                 display: flex;
-                justify-content: space-between;
-                gap: 8px;
-                .work-place-project-section-card-content-year-div{
-                    white-space: nowrap;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+                .work-place-project-section-card-content-project-name-year-div{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 8px;
+                    .work-place-project-section-card-content-year-div{
+                        white-space: nowrap;
+                    }
                 }
             }
         }
     }
-    
-    .work-place-project-section-grid-items-emty-div{
-        grid-column: span 1;
+
+    .work-place-project-section-grid-items-div:nth-child(even){
+        justify-content: center;
     }
+    .work-place-project-section-grid-items-div:nth-child(odd){
+        justify-content: center;
+    }
+    
+    // .work-place-project-section-grid-items-emty-div{
+    //     grid-column: span 1;
+    // }
 
 }
 
@@ -66,9 +79,12 @@
 @media (max-width: 480px) {
     .work-place-project-section-grid-container-div {
         .work-place-project-section-grid-items-div{
+            .work-place-project-section-card-div{
+                max-height: 470px !important;
+            }
             .work-place-project-section-card-image-div{
                 img{
-                    height: 400px;
+                    height: 400px !important;
                 }
             }
 

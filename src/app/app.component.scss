@@ -1,7 +1,9 @@
 body{
     background-color: var(--primary-background-color);
+    transition: all 0.3s ease-in-out;
 }
+
 html {
     scroll-behavior: smooth;
-  }
+}
   

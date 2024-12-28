@@ -34,8 +34,27 @@
                 align-items: center;
                 gap: 42px;
                 text-transform: uppercase;
-                .header-section-left-side-text:hover{
-                    border-bottom: 1px solid var(--tertiary-background-color);;
+
+                .header-section-left-side-text {
+                    position: relative;
+                    display: inline-block;
+                    text-decoration: none;
+                    padding-bottom: 4px;
+                }
+
+                .header-section-left-side-text::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 2px;
+                    background-color: var(--tertiary-background-color);
+                    transition: width 0.3s ease;
+                }
+
+                .header-section-left-side-text:hover::after {
+                    width: 100%;
                 }
             }
         }
@@ -68,6 +87,9 @@
                 display: flex;
                 align-items: center;
                 text-transform: uppercase;
+                background-color: var(--primary-background-color);
+                position: relative;
+                overflow: hidden;
 
                 .header-section-right-side-share-div {
                     display: flex;
@@ -154,7 +176,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-
         }
     }
 }
