@@ -9,6 +9,7 @@ import { ContactSectionComponent } from "../contact-section/contact-section.comp
 import { FooterSectionComponent } from '../footer-section/footer-section.component';
 import { SkillSectionComponent } from "../skill-section/skill-section.component";
 import { CommonModule } from '@angular/common';
+import { AnimationService } from '../animation/service/animation.service';
 
 @Component({
   selector: 'app-main-layout',
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
   imports: [HeaderSectionComponent, HomeSectionComponent, ProjectSectionComponent, AboutSectionComponent,
     MyHobbiesSectionComponent, WorkPlaceProjectSectionComponent, ContactSectionComponent, FooterSectionComponent, SkillSectionComponent, CommonModule],
   templateUrl: './main-layout.component.html',
-  styleUrls: ['./main-layout.component.scss','./main-layout-animation.component.scss']
+  styleUrls: ['./main-layout.component.scss','./main-layout-animation.component.scss'],
+  providers:[AnimationService]
 })
 export class MainLayoutComponent {
 

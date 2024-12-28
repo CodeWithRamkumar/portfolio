@@ -1,5 +1,6 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -7,11 +8,11 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './project-section.component.html',
-  styleUrl: './project-section.component.scss'
+  styleUrls: ['./project-section.component.scss']
 })
+
 export class ProjectSectionComponent implements OnInit {
   project_list!: { title: string; image: string;  description: string; }[];
-  // @ViewChild('project-section-image-div') elementRef!: ElementRef;
 
   constructor(){}
 
@@ -34,4 +35,7 @@ export class ProjectSectionComponent implements OnInit {
       }
     ]
   }
+
+  
+ 
 }

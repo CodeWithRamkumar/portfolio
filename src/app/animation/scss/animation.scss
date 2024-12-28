@@ -1,0 +1,154 @@
+//  animation left, right, bottom and top
+.animation-section-hide-left {
+    opacity: 0;
+    transform: translateX(-70%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    will-change: transform, opacity;
+}
+
+.animation-section-hide-right {
+    opacity: 0;
+    transform: translateX(70%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    will-change: transform, opacity;
+}
+
+.animation-section-hide-bottom {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    will-change: transform, opacity;
+}
+
+.animation-section-hide-top {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    will-change: transform, opacity;
+}
+
+.animation-section-show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+
+// Wave text animation
+.wave-animation-text-class {
+    display: inline-block;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.wave-animation-text-class span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px);
+    animation: wave-text 1s ease forwards;
+}
+
+@keyframes wave-text {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// rotation animation
+.rotate-animation-hide {
+    opacity: 0;
+}
+
+.rotate-animation-show {
+    opacity: 1;
+    animation: rotate-animation 3s linear;
+}
+
+@keyframes rotate-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// text jurk animation
+@keyframes animation-jerk {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(-10px, -10px);
+    }
+
+    20% {
+        transform: translate(10px, 10px);
+    }
+
+    30% {
+        transform: translate(-8px, 8px);
+    }
+
+    40% {
+        transform: translate(8px, -8px)
+    }
+
+    50% {
+        transform: translate(-6px, -6px);
+    }
+
+    60% {
+        transform: translate(6px, 6px);
+    }
+
+    70% {
+        transform: translate(-4px, 4px);
+    }
+
+    80% {
+        transform: translate(4px, -4px);
+    }
+
+    90% {
+        transform: translate(-2px, -2px);
+    }
+
+    100% {
+        transform: translate(2px, 2px);
+    }
+}
+
+.animation-jerk-text-hide{
+    opacity: 0;
+}
+
+.animation-jerk-text-show {
+    opacity: 1;
+    display: inline-block;
+    animation: animation-jerk 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.animation-jerk-text-show-gradient{
+    opacity: 1;
+    display: inline-block;
+    color: var(--secondary-background-color);
+    background: var(--ramkumar-name-gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animation-jerk 1s ease-in-out, opacity 1s ease-in-out;
+}

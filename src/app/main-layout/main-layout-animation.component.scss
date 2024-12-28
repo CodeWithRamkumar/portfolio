@@ -33,6 +33,7 @@
     background: var(--secondary-background-color);
     display: block;
     border-radius: 50%;
+    filter: blur(16px);
 }
 
 .home-blur-five-star0{
@@ -62,7 +63,7 @@
     overflow: hidden;
     .home-section-left-side-blur{
         left: -100px;
-        bottom: 100px;
+        bottom: 10px;
     }
     .home-section-right-side-blur{
         right: -100px;
@@ -74,12 +75,16 @@
     position: relative;
     overflow: hidden;
     .project-section-left-side-blur{
-        top: 200px;
+        top: 400px;
         left: -100px;
     }
     .project-section-right-side-blur{
-        top: 500px;
+        bottom: 0px;
         right: 0px;
+    }
+    .project-section-center-side-blur{
+        top: 600px;
+        left: 900px;
     }
 }
 

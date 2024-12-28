@@ -1,10 +1,19 @@
 <div class="project-section-inner-div">
     <div class="project-section-main-heading font-80 aBCWhyteinktrap-bold">Selected project</div>
-    <div class="project-section-card" *ngFor="let project of project_list">
-        <div class="project-section-image-div triggerTransistionLefAnimation">
+    <div class="project-section-card"  *ngFor="let project of project_list;let i =index;">
+        <div class="project-section-image-div" [class]="'project-section-image-div'+i"
+        [ngClass]="{
+            'animation-section-hide-left': (i + 1) % 2 !== 0,
+            'animation-section-hide-right': (i + 1) % 2 === 0
+         }">
             <img [src]="project.image" alt="" class="project-section-image">
         </div>
-        <div class="project-section-content-div">
+        <div class="project-section-content-div"
+        [ngClass]="{
+            'animation-section-hide-right': (i + 1) % 2 !== 0,
+            'animation-section-hide-left': (i + 1) % 2 === 0,
+         }"
+          [class]="'project-section-content-div'+i">
             <div class="project-section-content-heading font-38 inter-bold">{{project?.title}}</div>
             <div class="project-section-content-description font-18 inter-regular">With 3 years of experience in Angular and Java, I've navigated enough null pointers to keep things interesting.With 3 years of experience in Angular and Java, I've navigated enough null pointers to keep things interesting...
             </div>

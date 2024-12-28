@@ -13,12 +13,16 @@
         flex-direction: column;
         flex: 1;
         gap: 32px;
+        position: relative;
+        overflow: hidden;
         .skill-section-card-div{
-            padding: 32px 80px 32px 0px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
             border-top: 1px solid var(--primary-text-color);
+            padding: 32px 80px 32px 0px;
+            .skill-section-card-reveal-div{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
 
             .skill-section-card-label-main-div{
                 display: flex;

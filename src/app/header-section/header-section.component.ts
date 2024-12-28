@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { AnimationService } from '../animation/service/animation.service';
 
 @Component({
   selector: 'app-header-section',
@@ -14,7 +15,7 @@ export class HeaderSectionComponent implements OnInit {
   copied_link_trigger!: boolean;
   menu_type: any;
 
-  constructor() { }
+  constructor(private animationService:AnimationService) { }
 
   ngOnInit(): void {
     this.copied_link_trigger = false;
@@ -38,6 +39,13 @@ export class HeaderSectionComponent implements OnInit {
   }
 
   ngAfterViewInit(){
+    // ngAfterViewInit() {
+      if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+        // setTimeout(() => {
+          this.animationService.observeElementsVisibility(); 
+        // },100); 
+      }
+    // }
     this.scrollToFragment('home-section-app-id');
   }
 
@@ -89,7 +97,7 @@ export class HeaderSectionComponent implements OnInit {
     const fileUrl = 'resume/resume.pdf';
     const a = document.createElement('a');
     a.href = fileUrl;
-    a.download = 'resume.pdf';
+    a.download = 'ramkumar_resume.pdf';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
