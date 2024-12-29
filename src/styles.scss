@@ -177,10 +177,12 @@
 
 .font-16 {
     font-size: 16px;
+    line-height: 23px;
 }
 
 .font-18 {
     font-size: 18px;
+    line-height: 28px;
 }
 
 .font-20 {
@@ -393,7 +395,7 @@ body,*{
     box-sizing: border-box;
 }
 
-.primary-button{
+.primary-button {
     height: 48px;
     padding: 8px 24px;
     border: 1px solid var(--primary-button-text-color);
@@ -402,18 +404,49 @@ body,*{
     cursor: pointer;
     font-family: 'Inter-Bold', sans-serif;
     font-size: 18px;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition: color 0.3s, background-color 0.3s;
 }
 
-.primary-button:hover{
-    border: 1px solid var(--tertiary-button-text-color);
-    color: var(--tertiary-button-text-color);
+.primary-button::before, .primary-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.primary-button::before {
     background: var(--tertiary-background-color);
+    transform-origin: 0 50%;
 }
 
-.primary-button:active{
-    border: 1px solid var(--secondary-button-text-color);
-    color: var(--secondary-button-text-color);
-    background: var(--secondary-background-color);
+.primary-button::after {
+    background-color: var(--secondary-background-color);
+    transform-origin: 100% 50%;
+}
+
+.primary-button:hover {
+    color: var(--tertiary-text-color);
+}
+
+.primary-button:hover::before {
+    transform: scaleX(1);
+}
+
+.primary-button.active {
+    color: var(--tertiary-text-color);
+    background-color: var(--secondary-background-color);
+    border: 1px solid var(--secondary-text-color);
+}
+
+.primary-button.active::after {
+    transform: scaleX(1);
 }
 
 app-main-layout{

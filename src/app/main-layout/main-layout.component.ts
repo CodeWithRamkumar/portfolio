@@ -21,6 +21,13 @@ import { AnimationService } from '../animation/service/animation.service';
   providers:[AnimationService]
 })
 export class MainLayoutComponent {
-
+  pageReload!:boolean;
   stars = [{},{}]
+
+  ngOnInit() {
+    this.pageReload = false;
+    setTimeout(() => {
+      this.pageReload = true;
+    }, 100);
+  }
 }

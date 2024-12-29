@@ -4,9 +4,6 @@
     .inner-container{
         display: flex;
         flex-direction: column;
-        // max-width: 1600px;
-        // margin: 0 auto;
-        // overflow: hidden; 
     }
 }
 
@@ -28,10 +25,10 @@
 .my-hobbies-section-div,
 .project-section-div,
 .skill-section-div,
-.about-section-div,
 .work-place-project-section-div,
-.contact-section-div{
-    max-width: 1600px;
+.contact-section-div,
+.about-section-div{
+    max-width: 1250px;
     margin: 0 auto;
 }
 
@@ -39,7 +36,19 @@
 .skill-section-div,
 .about-section-div,
 .work-place-project-section-div,
-.my-hobbies-section-div,
+// .my-hobbies-section-div,
 .contact-section-div{
-    padding: 60px 32px 0px 32px;
+    padding: 160px 32px 0px 32px;
+}
+
+@media (max-width: 992px) {
+    .project-section-div,
+    .skill-section-div,
+    .about-section-div,
+    .work-place-project-section-div,
+    // .my-hobbies-section-div,
+    .contact-section-div{
+        padding: 60px 32px 0px 32px;
+    }
+    
 }
