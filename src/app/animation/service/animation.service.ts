@@ -14,13 +14,12 @@ export class AnimationService {
     elementSelectors: string[], //  apply class list class name
     showClass: string, // show animation class name
     hideClass: string, // hide aimimation class name
-    threshold: number = 0.5,
+    threshold: number = 0.9,
     class_wave: string, // wave animation class name
-    wave_text: string //  wave animation text
+    wave_text: string ,//  wave animation text,
+    unsubcribeEnable: boolean = true
   ) {
     const observer = new IntersectionObserver(entries => {
-      console.log(targetSelector);
-      
       entries.forEach(entry => {
         if (elementSelectors.length > 0) {
           elementSelectors.forEach(selector => {
@@ -31,6 +30,9 @@ export class AnimationService {
                   list.classList.remove(hideClass);
                   list.classList.add(showClass);
                 });
+                if(unsubcribeEnable){
+                  observer.unobserve(entry.target);
+                }
               } else {
                 element.forEach((list)=>{
                   list.classList.remove(showClass);
@@ -41,7 +43,10 @@ export class AnimationService {
           });
         } else {
           if (entry.isIntersecting) {
-            this.textReveal(class_wave, wave_text)
+            this.textReveal(class_wave, wave_text);
+            if(unsubcribeEnable){
+              observer.unobserve(entry.target);
+            }
           } else {
             this.textHide(class_wave, wave_text);
           }
@@ -58,61 +63,71 @@ export class AnimationService {
 
   // Call observeSectionVisibility for each section in your app
   observeElementsVisibility(): void {
+   let width =  window.innerWidth<992
     // project section // work place project section 
     const sectionConfigs = [
       { 
         mainContainerClass: '.project-section-card', 
         targetClass: '.project-section-image-div0', 
         hideClass: 'animation-section-hide-left', 
-        showClass: 'animation-section-show' 
+        showClass: 'animation-section-show',
+        threshold:0.8 
       },
       { 
         mainContainerClass: '.project-section-card', 
         targetClass: '.project-section-image-div1', 
         hideClass: 'animation-section-hide-right', 
-        showClass: 'animation-section-show' 
+        showClass: 'animation-section-show',
+        threshold:0.8 
       },
       { 
         mainContainerClass: '.project-section-card', 
         targetClass: '.project-section-image-div2', 
         hideClass: 'animation-section-hide-left', 
-        showClass: 'animation-section-show' 
+        showClass: 'animation-section-show',
+        threshold:0.8 
       },
       { 
         mainContainerClass: '.project-section-card', 
         targetClass: '.project-section-content-div0', 
         hideClass: 'animation-section-hide-right', 
-        showClass: 'animation-section-show' 
+        showClass: 'animation-section-show',
+        threshold:0.8  
       },
       { 
         mainContainerClass: '.project-section-card', 
         targetClass: '.project-section-content-div1', 
         hideClass: 'animation-section-hide-left', 
-        showClass: 'animation-section-show' 
+        showClass: 'animation-section-show',
+        threshold:0.8 
       },
       { 
         mainContainerClass: '.project-section-card', 
         targetClass: '.project-section-content-div2', 
         hideClass: 'animation-section-hide-right', 
-        showClass: 'animation-section-show' 
+        showClass: 'animation-section-show',
+        threshold:0.8  
       },
       { 
         mainContainerClass: '.work-place-project-section-grid-items-div', 
         targetClass: '.work-place-section-div0', 
         hideClass: 'animation-section-hide-right', 
-        showClass: 'animation-section-show' 
+        showClass: 'animation-section-show',
+        threshold:0.8 
       },
       { 
         mainContainerClass: '.work-place-project-section-grid-items-div', 
         targetClass: '.work-place-section-div1', 
         hideClass: 'animation-section-hide-left', 
-        showClass: 'animation-section-show' 
+        showClass: 'animation-section-show',
+        threshold:0.8
       },
       { 
         mainContainerClass: '.work-place-project-section-grid-items-div', 
         targetClass: '.work-place-section-div2', 
         hideClass: 'animation-section-hide-right', 
-        showClass: 'animation-section-show' 
+        showClass: 'animation-section-show',
+        threshold:0.8 
       }
     ];
     
@@ -123,7 +138,7 @@ export class AnimationService {
         [config.targetClass],
         config.showClass,
         config.hideClass,
-        0.8,
+        width ? 0.7:config.threshold,
         '',
         '' 
       );
@@ -135,14 +150,14 @@ export class AnimationService {
     this.observeSectionVisibility('.header-section-mobile-menu-div', ['.header-animation-class'], 'animation-section-show', 'animation-section-hide-top', 0.5, '', '');
    
     // home section 
-    this.observeSectionVisibility('.home-section-inner-div', ['.home-text-animation-jurk-class'], 'animation-jerk-text-show', 'animation-jerk-text-hide', 0.5, '', '');
-    this.observeSectionVisibility('.home-section-inner-div', ['.home-text-animation-jurk-gradient-class'], 'animation-jerk-text-show-gradient', 'animation-jerk-text-hide', 0.5, '', '');
+    this.observeSectionVisibility('.home-section-inner-div', ['.home-text-animation-left-class'], 'animation-section-show', 'animation-section-hide-left', 0.5, '', '');
+    this.observeSectionVisibility('.home-section-inner-div', ['.home-text-animation-right-class'], 'animation-section-show', 'animation-section-hide-right', 0.5, '', '');
 
     // skill section
-    this.observeSectionVisibility('.skill-section-card-div', ['.skill-section-card-reveal-div'], 'animation-section-show', 'animation-section-hide-right', 0.5, '', '');
+    this.observeSectionVisibility('.skill-section-card-div', ['.skill-section-card-reveal-div'], 'animation-section-show', 'animation-section-hide-right', 0.8, '', '');
 
     // about section
-    this.observeSectionVisibility('.about-section-card', ['.about-section-card-image-div', '.about-section-card-content-div'], 'animation-section-show', 'animation-section-hide-left', 0.5, '', '');
+    this.observeSectionVisibility('.about-section-card', ['.about-section-card-image-div', '.about-section-card-content-div'], 'animation-section-show', 'animation-section-hide-left', 0.8, '', '');
     this.observeSectionVisibility('.about-education-div', ['.about-education-content-main-div', '.about-education-content-heading-div', '.education-experince-separate-div'], 'animation-section-show', 'animation-section-hide-bottom', 0.8, '', '');
     this.observeSectionVisibility('.about-experince-div', ['.about-experince-content-main-div', '.about-experince-content-heading-div', '.education-experince-separate-div'], 'animation-section-show', 'animation-section-hide-bottom', 0.8, '', '');
     this.observeSectionVisibility('.education-experince-separate-div', ['.education-experince-separate-span-2'], 'animation-section-show', 'animation-section-hide-bottom', 0.8, '', '');
@@ -159,14 +174,14 @@ export class AnimationService {
     ];
 
     footerSectionSelectors.forEach(({ selector, elementClass, text }) => {
-      this.observeSectionVisibility(selector, [], '', '', 0.3, elementClass, text);
+      this.observeSectionVisibility(selector, [], '', '', 0.8, elementClass, text);
     });
 
     this.observeSectionVisibility('.contact-section-main-div', ['.fa-envelope', '.fa-github', '.fa-linkedin', '.contact-section-download-cv-buton'],
       'animation-section-show', 'animation-section-hide-bottom', 0.5, '', '');
 
     // star rotate amimation
-    this.observeSectionVisibility('.contact-section-main-div', ['.contact-five-star-animation-svg'], 'rotate-animation-show', 'rotate-animation-hide', 0.5, '', '');
+    this.observeSectionVisibility('.contact-section-main-div', ['.contact-five-star-animation-svg'], 'rotate-animation-show', 'rotate-animation-hide', 0.8, '', '');
     this.observeSectionVisibility('.home-section-inner-div', ['.home-star-animation-svg'], 'rotate-animation-show', 'rotate-animation-hide', 0.5, '', '');
   }
 
@@ -195,6 +210,15 @@ export class AnimationService {
     if (element) {
       element.innerHTML = "";
     }
+  }
+
+  animationFunction(event:any){
+    console.log(event);
+    const button = event.target;
+    button.classList.add('active');
+    setTimeout(() => {
+      button.classList.remove('active');
+    }, 2000);
   }
 
 }

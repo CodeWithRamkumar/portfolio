@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AnimationService } from '../animation/service/animation.service';
-
 @Component({
   selector: 'app-header-section',
   standalone: true,
@@ -38,16 +37,15 @@ export class HeaderSectionComponent implements OnInit {
     }
   }
 
-  ngAfterViewInit(){
-    // ngAfterViewInit() {
-      if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-        // setTimeout(() => {
-          this.animationService.observeElementsVisibility(); 
-        // },100); 
-      }
-    // }
-    this.scrollToFragment('home-section-app-id');
+  ngAfterViewInit() {
+    if (typeof window !== 'undefined') {
+      this.copied_link = window.location.href;
+      window.scrollTo(0, 0);
+      // this.scrollToFragment('home-section-app-id');
+      this.animationService.observeElementsVisibility();
+    }
   }
+
 
   themeChangeTrigger() {
     this.theme_type = this.theme_type == 'Dark' ? 'Light' : 'Dark';
@@ -61,19 +59,49 @@ export class HeaderSectionComponent implements OnInit {
     localStorage.setItem('theme_mode',this.theme_type)
   }
 
+  
   copyLinkTrigger() {
     this.copied_link_trigger = true;
-    navigator.clipboard.writeText(this.copied_link).then(
-      (err) => {
-        console.error('Could not copy text: ', err);
-      }
-    ).finally(() => {
-      setTimeout(() => {
-        this.copied_link_trigger = false;
-      }, 1000);
-    });
+    const textToCopy = this.copied_link;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          console.log("Text copied using Clipboard API.");
+          setTimeout(() => {
+            this.copied_link_trigger = false;
+          }, 3000);
+        })
+        .catch((err) => {
+          console.error("Clipboard API failed:", err);
+          this.fallbackCopyToClipboard(textToCopy);
+        });
+    } else {
+      this.fallbackCopyToClipboard(textToCopy);
+    }
   }
   
+  // Fallback method using execCommand for mobile
+  fallbackCopyToClipboard(text: string) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+  
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        console.log("Text copied using execCommand.");
+        setTimeout(() => {
+          this.copied_link_trigger = false;
+        }, 3000);
+      } else {
+        console.error("Copy failed with execCommand (return false).");
+      }
+    } catch (err) {
+      console.error("Error copying with execCommand:", err);
+    }
+    document.body.removeChild(textArea);
+  }
 
   openMenu() {
     this.menu_type = this.menu_type == 'show' ? 'hide' : 'show';
@@ -84,17 +112,24 @@ export class HeaderSectionComponent implements OnInit {
       const element = document.getElementById(fragment);
       if (element) {
         const rect = element.getBoundingClientRect();
-        const offset = -60;
+        let offset;
+        if(fragment == 'home-section-app-id'){
+          offset = -60;
+        }else{
+          offset= window.innerWidth<900 ? -60: 60;
+        }
+       
         window.scrollTo({
           top: rect.top + window.pageYOffset + offset,
-          behavior: 'smooth'
+          // behavior: 'instant'
         });
+        this.animationService.observeElementsVisibility(); 
       }
     }
   }
 
   downloadFile() {
-    const fileUrl = 'resume/resume.pdf';
+    const fileUrl = 'resume/ramkumar_resume.pdf';
     const a = document.createElement('a');
     a.href = fileUrl;
     a.download = 'ramkumar_resume.pdf';

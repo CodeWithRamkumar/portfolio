@@ -1,6 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { AnimationService } from '../animation/service/animation.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectSectionComponent implements OnInit {
   project_list!: { title: string; image: string;  description: string; }[];
 
-  constructor(){}
+  constructor(public animationService:AnimationService){}
 
   ngOnInit(): void {
     this.project_list = [
@@ -35,6 +36,7 @@ export class ProjectSectionComponent implements OnInit {
       }
     ]
   }
+
 
   
  

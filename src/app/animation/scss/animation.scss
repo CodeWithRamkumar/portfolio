@@ -73,7 +73,7 @@
 
 .rotate-animation-show {
     opacity: 1;
-    animation: rotate-animation 3s linear;
+    animation: rotate-animation 3s linear infinite;
 }
 
 @keyframes rotate-animation {

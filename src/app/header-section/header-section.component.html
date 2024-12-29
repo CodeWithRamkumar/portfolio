@@ -74,8 +74,8 @@
             <span class="font-26 inter-bold" (click)="downloadFile();openMenu()">Download CV</span>
             <i class="fa-solid fa-download font-26"></i> 
         </div>
-        <div class="header-section-mobile-menu-text-div cp header-animation-class animation-section-hide-top">
-            <span class="font-26 inter-bold" (click)="copyLinkTrigger();openMenu();">Share</span>
+        <div class="header-section-mobile-menu-text-div cp header-animation-class animation-section-hide-top"  (click)="openMenu();copyLinkTrigger();">
+            <span class="font-26 inter-bold">Share</span>
             <i class="fa-solid fa-copy font-26"></i>
         </div>
     </div>
