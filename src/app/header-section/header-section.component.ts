@@ -41,8 +41,7 @@ export class HeaderSectionComponent implements OnInit {
     if (typeof window !== 'undefined') {
       this.copied_link = window.location.href;
       window.scrollTo(0, 0);
-      // this.scrollToFragment('home-section-app-id');
-      this.animationService.observeElementsVisibility();
+      this.animationService.observeElementsVisibility('load');
     }
   }
 
@@ -118,12 +117,11 @@ export class HeaderSectionComponent implements OnInit {
         }else{
           offset= window.innerWidth<900 ? -60: 60;
         }
-       
         window.scrollTo({
           top: rect.top + window.pageYOffset + offset,
           // behavior: 'instant'
         });
-        this.animationService.observeElementsVisibility(); 
+        this.animationService.observeElementsVisibility( fragment == 'footer-section-app-id' ? 'menu':'load'); 
       }
     }
   }
