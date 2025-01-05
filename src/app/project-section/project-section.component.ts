@@ -21,17 +21,17 @@ export class ProjectSectionComponent implements OnInit {
     this.project_list = [
       {
         title:"Project title here 1",
-        image:"/images/Rectangle 4.png",
+        image:"images/Rectangle 4.png",
         description:""
       },
       {
         title:"Project title here 2",
-        image:"/images/Rectangle 5.png",
+        image:"images/Rectangle 5.png",
         description:""
       },
       {
         title:"Project title here 3",
-        image:"/images/Rectangle 5.png",
+        image:"images/Rectangle 5.png",
         description:""
       }
     ]
