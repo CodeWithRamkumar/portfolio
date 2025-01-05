@@ -52,7 +52,7 @@
     width: 40px;
     height: 40px;
     bottom: 50px;
-    right: 20px;
+    right: 80px;
     path{
         fill: var(--secondary-background-color);
     }
@@ -62,11 +62,11 @@
     position: relative;
     overflow: hidden;
     .home-section-left-side-blur{
-        left: -100px;
+        left: -50px;
         bottom: 10px;
     }
     .home-section-right-side-blur{
-        right: -100px;
+        right: -10px;
         top: 80px;
     }
 }
@@ -80,18 +80,18 @@
     }
     .project-section-right-side-blur{
         bottom: 0px;
-        right: 0px;
+        right: -100px;
     }
     .project-section-center-side-blur{
-        top: 600px;
-        left: 900px;
+        top: 60%;
+        right: 50%;
     }
 }
 
 .skill-section-blur-main-div{
     position: relative;
     .skill-section-left-side-blur{
-        top: 300px;
+        top: 35%;
         left: 0px;
     }
 }
@@ -100,8 +100,8 @@
     position: relative;
     overflow: hidden;
     .about-section-right-side-blur{
-        top: 100px;
-        right: -100px;
+        top: 18%;
+        right: 15%;
     }
 }
 
