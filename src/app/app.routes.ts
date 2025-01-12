@@ -2,17 +2,12 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: "home",
+        path: "",
         loadComponent: () => import('./main-layout/main-layout.component').then((x) => x.MainLayoutComponent),
         // component:MainLayoutComponent
     },
     {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full',
-      },
-      {
-        path: '**',
-        redirectTo: 'home', // Fallback route
-      }
+        path: "**",
+        redirectTo:""
+    }
 ];
