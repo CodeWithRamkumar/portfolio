@@ -22,9 +22,11 @@
             stranger—hit me up, and let’s turn your ideas into code (minus the bugs, hopefully)! -->
         </div>
         <div class="contact-section-social-media-div">
-            <i class="fa-regular fa-envelope animation-section-hide-bottom"></i>
-            <i class="fa-brands fa-github animation-section-hide-bottom"></i>
-            <i class="fa-brands fa-linkedin animation-section-hide-bottom"></i>
+           <a href="mailto:ramkumar0325199@gmail.com">
+            <i class="fa-regular fa-envelope animation-section-hide-bottom" (click)="contactNavigation('M')"></i>
+           </a>
+            <i class="fa-brands fa-github animation-section-hide-bottom" (click)="contactNavigation('G')"></i>
+            <i class="fa-brands fa-linkedin animation-section-hide-bottom" (click)="contactNavigation('L')"></i>
         </div>
         <button class="primary-button contact-section-download-cv-buton animation-section-hide-bottom" (click)="downloadFile();animationService.animationFunction($event)">Download cv</button>
     </div>

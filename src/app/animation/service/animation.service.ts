@@ -158,8 +158,8 @@ export class AnimationService {
 
     // about section
     this.observeSectionVisibility('.about-section-card', ['.about-section-card-image-div', '.about-section-card-content-div'], 'animation-section-show', 'animation-section-hide-left', width ? 0.5:0.8, '', '');
-    this.observeSectionVisibility('.about-education-div', ['.about-education-content-main-div', '.about-education-content-heading-div', '.education-experince-separate-div'], 'animation-section-show', 'animation-section-hide-bottom', width ? 0.5:0.8, '', '');
-    this.observeSectionVisibility('.about-experince-div', ['.about-experince-content-main-div', '.about-experince-content-heading-div', '.education-experince-separate-div'], 'animation-section-show', 'animation-section-hide-bottom', width ? 0.5:0.8, '', '');
+    this.observeSectionVisibility('.about-education-div', ['.about-education-content-main-div', '.about-education-content-heading-div'], 'animation-section-show', 'animation-section-hide-bottom', width ? 0.5:0.8, '', '');
+    this.observeSectionVisibility('.about-experince-div', ['.about-experince-content-main-div', '.about-experince-content-heading-div'], 'animation-section-show', 'animation-section-hide-bottom', width ? 0.5:0.8, '', '');
     this.observeSectionVisibility('.education-experince-separate-div', ['.education-experince-separate-span-2'], 'animation-section-show', 'animation-section-hide-bottom', width ? 0.5:0.8, '', '');
 
     // fotter section
