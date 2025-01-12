@@ -7,7 +7,12 @@ export const routes: Routes = [
         // component:MainLayoutComponent
     },
     {
-        path: "**",
-        redirectTo:""
-    }
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+      {
+        path: '**',
+        redirectTo: 'home', // Fallback route
+      }
 ];
