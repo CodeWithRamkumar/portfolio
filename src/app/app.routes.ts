@@ -2,12 +2,12 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: "portfolio/home",
+        path: "home",
         loadComponent: () => import('./main-layout/main-layout.component').then((x) => x.MainLayoutComponent),
         // component:MainLayoutComponent
     },
     {
         path: "**",
-        redirectTo:"portfolio/home"
+        redirectTo:"home"
     }
 ];
