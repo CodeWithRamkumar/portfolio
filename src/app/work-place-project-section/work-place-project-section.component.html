@@ -1,12 +1,12 @@
 <div class="work-place-project-section-inner-div">
     <div class="work-place-project-section-grid-container-div">
         <div class="work-place-project-section-grid-items-heading-div work-place-project-section-heading inter-bold font-80">Projects</div>
-        <div class="work-place-project-section-grid-items-div" *ngFor="let work_projects of work_project_list;let i =index;">
+        <div class="work-place-project-section-grid-items-div cp"  *ngFor="let work_projects of work_project_list;let i =index;" (click)="navigationToLink(work_projects.link)">
             <div class="work-place-project-section-card-div" [class]="'work-place-section-div'+i" [ngClass]="{
                 'animation-section-hide-right': (i + 1) % 2 !== 0,
                 'animation-section-hide-left': (i + 1) % 2 === 0
              }">
-                <div class="work-place-project-section-card-image-div">
+                <div class="work-place-project-section-card-image-div" >
                     <img src="images/Rectangle 6 (1).png" alt="">
                 </div>
                 <div class="work-place-project-section-card-content-div">

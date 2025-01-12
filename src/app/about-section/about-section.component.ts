@@ -16,30 +16,19 @@ export class AboutSectionComponent implements OnInit {
   ngOnInit(): void {
     this.education_list = [
       {
-        education_name: "Education name here",
-        institution_name: "Educational institute name and address here",
-        start: "2014",
-        end: "2016"
-      },
-      {
-        education_name: "Education name here",
-        institution_name: "Educational institute name and address here",
-        start: "2014",
-        end: "2016"
+        
+        education_name: "Jeppiaar Srr Engineering College",
+        institution_name: "Electronics and Communication Engineering",
+        start: "2016",
+        end: "2020"
       }
     ]
     this.experince_list = [
       {
-        role: "Education name here",
-        office_name: "Educational institute name and address here",
-        start: "2014",
-        end: "2016"
-      },
-      {
-        role: "Education name here",
-        office_name: "Educational institute name and address here",
-        start: "2014",
-        end: "2016"
+        role: "Nila Apps Pvt Ltd",
+        office_name: "Front-end developer",
+        start: "2022",
+        end: "2025"
       }
     ]
   }
